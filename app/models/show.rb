@@ -1,3 +1,4 @@
+require 'pry'
 class Show < ActiveRecord::Base
   belongs_to :network
   has_many :characters
@@ -6,6 +7,7 @@ class Show < ActiveRecord::Base
   def actors_list
     self.characters.collect do |actor|
       "#{actor.name}"
+      binding.pry
     end
   end
 
