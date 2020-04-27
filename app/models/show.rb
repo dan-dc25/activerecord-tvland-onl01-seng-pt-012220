@@ -6,9 +6,9 @@ class Show < ActiveRecord::Base
 
   def actors_list
     self.actors.each do |actor|
-      "#{characters.name}[0]"
+      "#{characters.name}"
       #binding.pry
-    end
+    end.first
   end
 
 end
