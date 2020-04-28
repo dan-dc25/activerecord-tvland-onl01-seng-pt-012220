@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
 
   def actors_list
     self.actors.each do |actor|
-      "#{actor.full_name.split}"
+      "#{actor.full_name.split(', ')}"
       #binding.pry
     end
   end
