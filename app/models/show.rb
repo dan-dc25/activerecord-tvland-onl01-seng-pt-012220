@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
 
   def actors_list
     self.actors.each do |actor|
-      "#{actor.full_name}"
+      "(#{actor.full_name}).flatten"
       #binding.pry
     end
   end
