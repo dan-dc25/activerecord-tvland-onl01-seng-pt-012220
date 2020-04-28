@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   has_many :actors, through: :characters
 
   def actors_list
-    self.actors.each do |actor|
+    self.characters.each do |actor|
       "#{actor.full_name}"
       binding.pry
     end
