@@ -7,7 +7,7 @@ class Show < ActiveRecord::Base
   def actors_list
     self.actors.each do |actor|
       "(#{actor.first_name} #{actor.last_name}).split(', ').join"
-      binding.pry
+      #binding.pry
     end
   end
 
