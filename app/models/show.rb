@@ -5,8 +5,8 @@ class Show < ActiveRecord::Base
   has_many :actors, through: :characters
 
   def actors_list
-    self.actors.each do |actor|
-      "(#{actor.first_name} #{actor.last_name}).split(', ').join"
+    self.actors.collect do |actor|
+      "#{actor.full_name}"
       #binding.pry
     end
   end
